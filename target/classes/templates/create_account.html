@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+    <title>IfoCommunalka</title>
+</head>
+
+
+<body data-title="create-account">
+    <header>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <img th:src="@{assets/logo.png}" src="../static/assets/logo.png" alt="Communalka" class="logo">
+                <div class="login">
+                    <button disabled class="btn">Login</button>
+                    <button class="menu" id="menu"><i class="fas fa-bars"></i></button>
+                    <div id="dropDownMenu" class="'dropdown-content'">
+                        <ul>
+                            <li><a>About</a></li>
+                            <li><a>Help</a></li>
+                            <li><a>Contacts</a></li>
+                            <li class="main"><a>IFOperator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Showcase -->
+        <div class="showcase-wrapper">
+            <div id="showcase">
+                <form class="accountDiv">
+                    <div class="form-container">
+                        <div class="close_form">
+                            <button id="close"><i class="fas fa-times"></i></button>
+                        </div>
+                        <h2>Create an account</h2>
+                        <div class="info">
+                            <i class="far fa-dot-circle"></i>
+                            <p>Lorci Leo, Convallis A Enim Eget, Lacinia Gravida Ante. Morbi Lectus Nisi, Condimentum Quis Ipsum Sed, Vehicula Porttitor Dolor.</p>
+                        </div>
+                        <div class="form">
+                            <label for="username"></label>
+                            <input id="name" type="text" placeholder="Name" name="username" required>
+
+                            <label for="email"></label>
+                            <input type="email" id="email" placeholder="E-mail" name="email" required>
+                            <small id="smallName">Error message</small>
+
+                            <button id="join" class="btn-join">Join</button>
+                            <p class="add-info">Lorci leo, convallis a enim eget, lacinia gravida ante. Morbi lectus nisi, condimentum quis ipsum sed, </p>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+                <div class="email-wrapper envelope">
+                    <div class="envelope-content">
+                        <div class="letter-confirmation">
+                            <h2>Please, check your email. We have sent you a confirmation code.</h2>
+                            <div><i class="fas fa-envelope-open-text"></i></div>
+                        </div>
+
+                        <button id="join" class="btn-close">Close</button>
+
+                    </div>
+                </div>
+
+
+                <form class="codeDiv" style="display: none;">
+                    <div class="form-container">
+                        <div class="close_form">
+                            <button><i class="fas fa-times"></i></button>
+                        </div>
+                        <h2>Enter the code</h2>
+                        <div class="form">
+                            <label for="pass"></label>
+                            <input type="password" id="pass" name="password" placeholder="   -      -       -     -     -  " minlength="32" required>
+                            <small id="errorCode">Error message</small>
+                            <button id="enter" class="btn-join enter">Enter</button>
+                            <p class="add-info">Lorci leo, convallis a enim eget, lacinia gravida ante. Morbi lectus nisi, condimentum quis ipsum sed, </p>
+
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Sponsors -->
+    <div id="sponsors">
+        <div class="sponsors-grid">
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_3.png}" src="../static/assets/spons_3.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-wrapper">
+            <p> &copy; Copyright IfOperator 2020</p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" th:src="@{js/init.js}" src="../static/js/init.js"></script>
+</body>
+
+</html>

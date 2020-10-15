@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+    <title>IfoCommunalka</title>
+</head>
+
+
+<body data-title = "speciality">
+    <header>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <img th:src="@{assets/logo.png}" src="../static/assets/logo.png" alt="Communalka" class="logo">
+                <div class="login">
+                    <button disabled class="btn">Login</button>
+                    <button class="menu" id="menu"><i class="fas fa-bars"></i></button>
+                    <div id="dropDownMenu" class="'dropdown-content'">
+                        <ul>
+                            <li><a>About</a></li>
+                            <li><a>Help</a></li>
+                            <li><a>Contacts</a></li>
+                            <li class="main"><a>IFOperator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+         <!-- Showcase -->
+         <div class="profile-wrapper">
+            <div id="profile">
+                <form class="profile-content">
+                    <div class="interest_profile">
+                        <h2>Fill your speciality and interest</h2>
+                            <div class="specialize">
+                                <h3>Your Specialize In</h3>
+                                <div class="speciality-items">
+                                    <!-- <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="perfroming1" name="performing1" id="performing1"> 
+                                        <label for="performing1">Performing</label>
+                                    </div>-->
+
+                                </div>
+                                <div class="key-board">
+                                    <textarea name="speciality" id="" placeholder="Key Board Enter"></textarea>
+                                </div>
+                                <div class="output">
+                                    <h3>Speciality:</h3>
+                                    <div class="output-1">
+                                        <p>Performing, Stage Design, Production</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="interest">
+                                <h3>Your Specialize In</h3>
+                                <div class="interest-items">
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="perfroming2" name="performing2" id="performing2"> 
+                                        <label for="performing2">Performing</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="stage2" name="stage2" id="stage2"> 
+                                        <label for="stage2">Stage</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="sound2" name="sound2" id="sound2"> 
+                                        <label for="sound2">Sound</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="scene2" name="scene2" id="scene2"> 
+                                        <label for="scene2">Scene</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="stage-design2" name="stage-design2" id="stage-design2"> 
+                                        <label for="stage-design2">Stage Design</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="management2" name="management2" id="management2"> 
+                                        <label for="management2">Management</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="production2" name="production2" id="production2"> 
+                                        <label for="production2">Production</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="costumes2" name="costumes2" id="costumes2"> 
+                                        <label for="costumes2">Costumes</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="management3" name="management3" id="management3"> 
+                                        <label for="management3">Management</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="dancing2" name="dancing2" id="dancing2"> 
+                                        <label for="dancing2">Dancing</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="singing2" name="singing2" id="singing2"> 
+                                        <label for="singing2">Singing</label>
+                                    </div>
+
+                                    <div class="speciality-item">
+                                        <input class="chk-btn" type="checkbox"  value="instrumental2" name="instrumental2" id="instrumental2"> 
+                                        <label for="instrumental2">Instrumental</label>
+                                    </div>
+                                </div>
+                                <div class="key-board">
+                                    <textarea name="interest" id="" placeholder="Key Board Enter"></textarea>
+                                </div>
+                                <div class="output">
+                                    <h3>Interests:</h3>
+                                    <div class="output-2">
+                                        <p>Performing, Stage Design, Production</p>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="saveProfile">
+                            <a id="arrow" class="arrow" href="./profileForm.html"><i class="fas fa-arrow-left fa-2x"></i></a>
+                            <a id="edit" class="edit" href=""><i class="fas fa-pencil-alt"></i><span>Edit Info</span></a>
+                            <a id="save" class="save" href="./profile_foto.html">Save</a>
+                            <a id="arrow" class="arrow" href="./profile_foto.html"><i class="fas fa-arrow-right fa-2x"></i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sponsors -->
+    <div id="sponsors">
+        <div class="sponsors-grid">
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_3.png}" src="../static/assets/spons_3.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-wrapper">
+            <p> &copy; Copyright IfOperator 2020</p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" th:src="@{js/init.js}" src="../static/js/init.js"></script>
+</body>
+
+</html>

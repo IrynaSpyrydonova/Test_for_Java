@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+    <title>IfoCommunalka</title>
+</head>
+
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <img th:src="@{assets/logo.png}" src="../static/assets/logo.png" alt="Communalka" class="logo">
+                <div class="login">
+                    <button disabled class="btn">Login</button>
+                    <button class="menu" id="menu"><i class="fas fa-bars"></i></button>
+                    <div id="dropDownMenu" class="'dropdown-content'">
+                        <ul>
+                            <li><a>About</a></li>
+                            <li><a>Help</a></li>
+                            <li><a>Contacts</a></li>
+                            <li class="main"><a>IFOperator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Showcase -->
+        <div class="profile-wrapper">
+            <div id="profile">
+                <div class="profile-content">
+                    <div class="letter-info">
+                        <h2>Thanks, we have sent you an-email with the confirmation</h2>
+                        <div><i class="fas fa-envelope-open-text"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sponsors -->
+    <div id="sponsors">
+        <div class="sponsors-grid">
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_3.png}" src="../static/assets/spons_3.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-wrapper">
+            <p> &copy; Copyright IfOperator 2020</p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" th:src="@{js/init.js}" src="../static/js/init.js"></script>
+</body>
+
+</html>

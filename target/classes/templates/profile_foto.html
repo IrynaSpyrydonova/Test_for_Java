@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+    <link rel="stylesheet" th:href="@{/css/croppie.css}" href="../static/css/croppie.css" />
+    <title>IfoCommunalka</title>
+</head>
+
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <img th:src="@{assets/logo.png}" src="../static/assets/logo.png" alt="Communalka" class="logo">
+                <div class="login">
+                    <button disabled class="btn">Login</button>
+                    <button class="menu" id="menu">
+						<i class="fas fa-bars"></i>
+					</button>
+                    <div id="dropDownMenu" class="'dropdown-content'">
+                        <ul>
+                            <li><a>About</a></li>
+                            <li><a>Help</a></li>
+                            <li><a>Contacts</a></li>
+                            <li class="main"><a>IFOperator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Showcase -->
+        <div class="profile-wrapper">
+            <div id="profile">
+                <form class="profile-content">
+                    <div class="main-foto">
+                        <h2>Attach Your Profile Photo</h2>
+                        <div class="profile-foto-wrapper">
+
+                            <div class="profile-foto">
+                                <img id='userpic' src='../assets/face_icon_attach_foto.svg' aria-grabbed="false">
+                                <a class="upload-file-btn" id="uploadPhotoBtn">
+                                    <i class="fas fa-file-upload fa-2x"></i>
+                                    <input type="file" id="upload" value="Choose a file" accept="image/*">
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="saveProfile">
+                            <a id="arrow" class="arrow" href="./speciality_interest.html"><i
+					class="fas fa-arrow-left fa-2x"></i></a> <a id="edit" class="edit" href=""><i class="fas fa-pencil-alt"></i><span>Edit Photo</span></a>
+                            <div id="savePhotoBtn" class="disabled save">Save</div><a id="arrow" class="arrow" href="./create_password.html"><i
+					class="fas fa-arrow-right fa-2x"></i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sponsors -->
+    <div id="sponsors">
+        <div class="sponsors-grid">
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_3.png}" src="../static/assets/spons_3.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-wrapper">
+            <p>&copy; Copyright IfOperator 2020</p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i
+					class="fab fa-facebook fa-2x"></i></a> <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a> <a href="http://instagram.com" target="_blank"><i
+					class="fab fa-instagram-square fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" th:src="@{js/init.js}" src="../static/js/init.js"></script>
+    <script type="module" th:src="@{js/croppie.js}" src='../static/js/croppie.js'></script>
+    <script type="module" th:src="@{js/photoupload.js}" src='../static/js/photoupload.js'></script>
+</body>
+
+</html>

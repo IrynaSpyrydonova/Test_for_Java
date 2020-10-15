@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: irinaspyrydonova
+Build-Jdk: 14.0.2
+Implementation-Title: communalka
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: be.ifoperator
+Implementation-URL: https://spring.io/projects/spring-boot/communalka
+Created-By: Maven Integration for Eclipse
+

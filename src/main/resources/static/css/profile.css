@@ -1,0 +1,49 @@
+/* * {
+    border: 1px solid red;
+} */
+
+main {
+    margin: 0 auto;
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_holder {
+    display: flex;
+    flex-direction: row;
+    width: 640px;
+    height: 386px;
+    background: rgba(226, 16, 71, 0.04);
+}
+
+.profile_main_img {
+    width: 206px;
+    height: 288px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.profile_image_handlers {
+    /* Attach another photo */
+    width: 324px;
+    height: 29px;
+    font-family: Merriweather Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: #E21047;
+}
+
+.profile_working_area {
+    height: 50vh;
+    width: 640px;
+}
+
+.profile_friends_area {
+    width: 206px;
+}

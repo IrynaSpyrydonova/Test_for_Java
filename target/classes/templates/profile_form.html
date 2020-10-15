@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+    <link rel="stylesheet" th:href="@{/css/croppie.css}" href="../static/css/croppie.css">
+    <title>IfoCommunalka</title>
+</head>
+
+
+<body data-title="profileForm">
+    <header>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <img th:src="@{assets/logo.png}" src="../static/assets/logo.png" alt="Communalka" class="logo">
+                <div class="login">
+                    <button disabled class="btn">Login</button>
+                    <button class="menu" id="menu"><i class="fas fa-bars"></i></button>
+                    <div id="dropDownMenu" class="'dropdown-content'">
+                        <ul>
+                            <li><a>About</a></li>
+                            <li><a>Help</a></li>
+                            <li><a>Contacts</a></li>
+                            <li class="main"><a>IFOperator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Showcase -->
+        <div class="profile-wrapper">
+            <div id="profile">
+                <form class="profile-content">
+                    <div class="profileDiv">
+                        <h2>Fill the User info</h2>
+                        <div class="profileName">
+                            <label for="profileName">Enter your name</label>
+                            <input id="profileName" type="text" placeholder="Name" name="profileName" >
+                        </div>
+                        <div class="checkBox">
+                            <div class="checkItem">
+                                <label for="male">
+                                        <input type="radio" value="male" name="gender" id="male"> <span>Male</span>
+                                </label>
+                            </div>
+                            <div class="checkItem">
+                                <label for="female">
+                                        <input type="radio" value="female" name="gender" id="female"> <span>Female</span>
+                                </label>
+                            </div>
+                        </div>
+                        <p>Location</p>
+                        <div class="profileCountry">
+                            <label for="profileCountry">Country</label>
+                            <!-- <input type="country" id="profileCountry" placeholder="Select Or Type In" name="profileCountry" > -->
+                            <select name="profileCountry" id="profileCountry">
+                                <option value="">Select Your Country</option>
+                            </select>
+                        </div>
+                        <div class="profileCity">
+                            <label for="profileCity">Town/City/Village </label>
+                            <input type="text" id="profileCity" placeholder="Type In" name="city">
+                        </div>
+                        <div class="profileEmail">
+                            <label for="profileEmail">E-Mail</label>
+                            <input type="email" id="profileEmail" placeholder="E-mail" name="profileEmail">
+                        </div>
+                        <div class="phone">
+                            <label for="phone">Telephone Number</label>
+                            <input type="tel" id="phone" placeholder="Phone Number" name="phone">
+                        </div>
+                        <!-- Error message -->
+                        <small class="fill-all-fields">Please Fill In All Fields</small>
+                        <div class="saveProfile">
+                            <!-- <button id="edit" disabled class="edit disabled"><i class="fas fa-pencil-alt"></i><span>Edit Info</span></button>
+                            <button id="save" disabled class="save disabled">Save</button> -->
+                            <button id="arrow1" type="button" class="save">NEXT</button>
+                        </div>
+                    </div>
+
+                    <!-- Speciality and Interests -->
+
+                    <div class="interest_profile">
+                        <h2>Fill your speciality and interest</h2>
+                        <div class="specialize">
+                            <h3>Your Specialize In</h3>
+                            <div class="speciality-items">
+                            </div>
+                            <div class="key-board">
+                                <textarea name="" id="typeSpeciality" placeholder="Key Board Enter"></textarea>
+                            </div>
+                            <div class="output">
+                                <h3>Speciality:</h3>
+                                <div class="output-1">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interest">
+                            <h3>Your Specialize In</h3>
+                            <div class="interest-items">
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="perfroming2" name="interests" id="performing2">
+                                    <label for="performing2">Performing</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="stage2" name="interests" id="stage2">
+                                    <label for="stage2">Stage</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="sound2" name="interests" id="sound2">
+                                    <label for="sound2">Sound</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="scene2" name="interests" id="scene2">
+                                    <label for="scene2">Scene</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="stage-design2" name="interests" id="stage-design2">
+                                    <label for="stage-design2">Stage Design</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="interests" name="interests" id="management2">
+                                    <label for="management2">Management</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="production2" name="interests" id="production2">
+                                    <label for="production2">Production</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="costumes2" name="interests" id="costumes2">
+                                    <label for="costumes2">Costumes</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="management3" name="interests" id="management3">
+                                    <label for="management3">Management</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="dancing2" name="interests" id="dancing2">
+                                    <label for="dancing2">Dancing</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="singing2" name="interests" id="singing2">
+                                    <label for="singing2">Singing</label>
+                                </div>
+
+                                <div class="speciality-item">
+                                    <input class="chk-btn" type="checkbox" value="instrumental2" name="interests" id="instrumental2">
+                                    <label for="instrumental2">Instrumental</label>
+                                </div>
+                            </div>
+                            <div class="key-board">
+                                <textarea name="interest" id="typeInterest" placeholder="Key Board Enter"></textarea>
+                            </div>
+                            <div class="output">
+                                <h3>Interests:</h3>
+                                <div class="output-2">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Error message -->
+                        <small class="fill-all-interests">Please Choose At Least One Your Specialty And Interest</small>
+
+                        <div class="saveProfile">
+                            <button id="arrow2" class="save">PREVIOUS</button>
+                            <!-- <button id="edit2" disabled class="edit"><i class="fas fa-pencil-alt"></i><span>Edit Info</span></button>
+                            <button id="save2" disabled class="save">Save</button> -->
+                            <button id="arrow3" class="save">NEXT</button>
+                        </div>
+                    </div>
+
+                    <!-- Photo -->
+                    <div class="main-foto">
+                        <h2>Attach Your Profile Photo</h2>
+                        <div class="profile-foto-wrapper">
+
+                            <div class="profile-foto">
+                                <img id='userpic' src='../static/assets/face_icon_attach_foto.svg' aria-grabbed="false">
+                                <a class="upload-file-btn" id="uploadPhotoBtn">
+                                    <i class="fas fa-file-upload fa-2x"></i>
+                                    <input type="file" id="upload" value="Choose a file" accept="image/*">
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="saveProfile">
+                            <button id="arrow" class="save">PREVIOUS</button>
+                            <div class="photo-handler-wrapper">
+                                <button id="editPhoto" class="photo-handlers" disabled><i class="fas fa-pencil-alt"></i></button>
+                                <button id="savePhotoBtn" class="photo-handlers">OK</button>
+                            </div>
+                            <button id="arrow5" class="save">NEXT</button>
+                        </div>
+                    </div>
+
+                    <!-- Tell about Yourself -->
+                    <div class="addUserInfo">
+                        <h2>Add several words about your Experience and about Yourself</h2>
+                        <div class="addUserInfo-wrapper">
+                            <div class="form-control">
+                                <label for="addUserInfoInput"></label>
+                                <textarea name="" id="addUserInfoInput" placeholder="Key Board Enter"></textarea>
+                            </div>
+                        </div>
+                        <div class="userInfo-save">
+                            <button id="submit" class="save">Save</button>
+                        </div>
+                    </div>
+
+                    <!-- Send Letter -->
+
+                    <div class="letter-info">
+                        <h2>Thanks, we have sent you an-email with the confirmation</h2>
+                        <div><i class="fas fa-envelope-open-text"></i></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sponsors -->
+    <div id="sponsors">
+        <div class="sponsors-grid">
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_3.png}" src="../static/assets/spons_3.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-wrapper">
+            <p> &copy; Copyright IfOperator 2020</p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" th:src="@{js/init.js}" src="../static/js/init.js"></script>
+    <script type="module" th:src="@{js/croppie.js}" src="../static/js/croppie.js"></script>
+    <script type="module" th:src="@{js/photoupload.js}" src="../static/js/photoupload.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1760 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Main */
+
+html,
+body {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+input {
+    padding-left: 10px;
+}
+
+
+/* Navigation */
+
+#navbar {
+    background: #ffffff;
+    overflow: auto;
+    height: 9vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1200px;
+    height: 100%;
+}
+
+#navbar .logo {
+    width: 186px;
+    height: 43px;
+}
+
+#navbar .login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .login :disabled {
+    background: rgba(226, 16, 71, 0.56);
+}
+
+#navbar .btn {
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    width: 114px;
+    height: 31px;
+    background: #E21047;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 4px 1px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#navbar .hidden {
+    visibility: hidden;
+}
+
+#navbar .menu {
+    background: #FFFF;
+    border: none;
+    color: #E21047;
+    margin-left: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+#navbar .menu .fa-bars {
+    font-size: 27px;
+}
+
+
+/* Dropdown Menu */
+
+#dropDownMenu {
+    display: none;
+    position: absolute;
+    top: 9vh;
+    padding: 20px;
+    margin-left: 20px;
+    width: 170px;
+    height: 177px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    z-index: 1000;
+}
+
+#dropDownMenu ul {
+    padding-top: 15px;
+    width: 100%;
+    list-style: none;
+    width: 97px;
+    height: 23px;
+}
+
+#dropDownMenu ul li {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    padding: 4px 0 4px 6px;
+    cursor: pointer;
+}
+
+#dropDownMenu ul li.main {
+    color: #E21047;
+}
+
+
+/* Showcase */
+
+.showcase-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+
+#showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/mainfoto.png') no-repeat center center/cover;
+    height: 69vh;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#showcase .showcase-content,
+#change_login .showcase-content {
+    width: 473px;
+    color: #fff;
+    text-align: center;
+    padding-top: 90px;
+}
+
+#showcase .showcase-content h1 {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 65px;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+#showcase .btn {
+    display: inline-block;
+    margin-top: 30px;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(255, 17, 17, 0.6) 0%, rgba(255, 134, 134, 0.30625) 40.1%, rgba(255, 255, 255, 0) 100%), #E21047;
+    background-blend-mode: multiply, normal;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 177px;
+    height: 48px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    outline: none;
+    text-decoration: none;
+}
+
+
+/* Create account form */
+
+.accountDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 598px;
+    height: 348px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.codeDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 598px;
+    height: 238px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+
+.form-container,
+.form,
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 95%;
+}
+
+.form-container .info {
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 20px 20px20px;
+}
+
+.form-container h2 {
+    width: 252px;
+    height: 35px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    color: #E21047;
+    padding-top: 10px;
+}
+
+.codeDiv .form-container h2 {
+    padding-bottom: 40px;
+}
+
+.email-wrapper {
+    display: none;
+}
+
+.envelope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    height: 69vh;
+    max-width: 1140px;
+    margin: auto;
+    display: none;
+}
+
+.envelope-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 592px;
+    height: 100%;
+    background: rgba(196, 196, 196, 0.28);
+}
+
+.close-container {
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 100%;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.btn-close {
+    box-sizing: border-box;
+    width: 75px;
+    height: 30px;
+    background: #E21047;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin: 30px;
+    outline: none;
+    border: none;
+}
+
+.form-container p {
+    width: 311px;
+    height: 18px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: justify;
+    color: #000000;
+    padding-left: 20px;
+}
+
+.form-container .fa-dot-circle,
+.form-container .fa-times {
+    font-size: 20px;
+    color: #E21047;
+    margin-top: 10px;
+}
+
+.form-container .close_form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px 20px;
+}
+
+.form-container button {
+    background: #FFFFFF;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    width: 324px;
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: start;
+    color: rgba(0, 0, 0, 0.78);
+}
+
+#name,
+#email,
+#pass {
+    width: 347px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    margin: 5px;
+    outline: none;
+    line-height: 100%;
+    padding: 6px 10px;
+}
+
+#name {
+    margin-top: 10px;
+}
+
+#pass {
+    padding: 6px 20px;
+    letter-spacing: 5px;
+}
+
+.form-container small {
+    color: #E21047;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    visibility: hidden;
+}
+
+.form-container small.error {
+    visibility: visible;
+}
+
+.password-requirements2 .passError {
+    visibility: visible;
+    color: #E21047;
+}
+
+.form-container small#confirm.error {
+    color: #FFFF;
+    visibility: visible;
+}
+
+.form-container .btn-join {
+    width: 114px;
+    height: 31px;
+    background: #E21047;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 10px;
+    text-decoration: none;
+    padding: 7px 10px;
+}
+
+.form-container .enter {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.form-container .add-info {
+    width: 487px;
+    height: 25px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 11px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.49);
+    padding: 0;
+    margin-top: 10px;
+}
+
+
+/* Greeting */
+
+#greeting {
+    /*display: none;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/welcome_screen.png') no-repeat center center/cover;
+    height: 69vh;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+#greeting .showcase-content {
+    width: 473px;
+    color: #fff;
+    text-align: center;
+}
+
+.welcome {
+    height: 38px;
+    background: #E21047;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 30px;
+    text-decoration: none;
+    padding: 10px 25px;
+}
+
+.greeting {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 65px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.45);
+    margin: 40px;
+}
+
+
+/* Profile form */
+
+.profile-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+#profile,
+#friend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    height: 69vh;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 69vh;
+    margin: auto;
+    width: 592px;
+    height: 100%;
+    background: rgba(196, 196, 196, 0.28);
+}
+
+.profileDiv {
+    display: grid;
+    grid-template-areas: "header header" "name gender" "location location " "country city" "email phone" " error error" "profileBtn profileBtn";
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+.profileDiv label {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    padding: 10px 10px 10px 0;
+}
+
+.profileDiv h2 {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    color: #E21047;
+}
+
+.profileDiv .profileName {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileDiv .profileName input#profileName,
+.profileDiv .profileCountry select#profileCountry,
+.profileDiv .profileEmail input#profileEmail {
+    width: 180px;
+    height: 29px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+}
+
+.profileDiv .profileCountry select#profileCountry {
+    padding: 0;
+}
+
+.profileDiv .profileCity input#profileCity,
+.profileDiv .phone input#phone {
+    width: 132px;
+    height: 29px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+}
+
+.profileDiv .profileCity input#profileCity::placeholder,
+.profileDiv .phone input#phone::placeholder,
+.profileDiv .profileName input#profileName::placeholder,
+.profileDiv .profileCountry input#profileCountry::placeholder,
+.profileDiv .profileEmail input#profileEmail::placeholder {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.44);
+}
+
+.profileDiv .profileCountry select option {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.44);
+}
+
+.profileDiv .checkBox {
+    grid-area: gender;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.profileDiv .checkItem {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.profileDiv .checkItem label {
+    align-items: center;
+    padding-left: 30px;
+}
+
+.profileDiv [type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    width: 1px;
+}
+
+.profileDiv [type="radio"]+span {
+    display: block;
+}
+
+.profileDiv [type="radio"]+span:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.25em;
+    border-radius: 1em;
+    border: 0.125em solid #fff;
+    box-shadow: 0 0 0 0.15em #E21047;
+    margin-right: 0.75em;
+    transition: 0.5s ease all;
+}
+
+[type="radio"]:checked+span:before {
+    background: #E21047;
+}
+
+.profileDiv p {
+    grid-area: location;
+    width: 324px;
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.profileDiv small.fill-all-fields,
+.interest_profile small.fill-all-interests{
+    grid-area: error;
+    display: none;
+    color: #E21047;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+
+.profileDiv .profileCountry {
+    grid-area: country;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileDiv .profileCity {
+    grid-area: city;
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+
+.profileDiv .profileEmail {
+    grid-area: email;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileDiv .phone {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+
+.profileDiv .saveProfile,
+.interest_profile .saveProfile {
+    grid-area: profileBtn;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 40px;
+}
+
+.profileDiv .saveProfile .edit,
+.interest_profile .saveProfile .edit,
+.main-foto .saveProfile .edit {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #E21047;
+    padding: 0 15px;
+    border: none;
+}
+
+.profileDiv .saveProfile .edit:disabled,
+.interest_profile .saveProfile .edit:disabled,
+.main-foto .saveProfile .edit:disabled {
+    color: rgba(226, 16, 71, 0.56);
+}
+
+.profileDiv .saveProfile .edit span,
+.interest_profile .saveProfile .edit span,
+.main-foto .saveProfile .edit span {
+    padding: 0 10px 0 5px;
+    font-size: 16px;
+}
+
+.profileDiv .saveProfile .save,
+.interest_profile .saveProfile .save,
+.main-foto .saveProfile .save {
+    width: auto;
+    height: 30px;
+    background: #E21047;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin: 0 20px;
+    outline: none;
+    border: none;
+}
+
+.profileDiv .saveProfile .save:disabled,
+.interest_profile .saveProfile .save:disabled,
+.main-foto .saveProfile .save.disabled {
+    background: rgba(226, 16, 71, 0.36);
+}
+
+.profileDiv .saveProfile .fa-arrow-right,
+.profileDiv .saveProfile .fa-pencil-alt,
+.interest_profile .saveProfile .fa-arrow-right,
+.interest_profile .saveProfile .fa-pencil-alt,
+.main-foto .saveProfile .fa-arrow-right,
+.main-foto .saveProfile .fa-pencil-alt {
+    font-size: 16px;
+    font-weight: 300;
+    color: #E21047;
+    border: none;
+}
+
+.profileDiv .saveProfile .fa-pencil-alt,
+.interest_profile .saveProfile .fa-pencil-alt {
+    /*.main-foto .saveProfile .fa-pencil-alt { */
+    color: rgba(226, 16, 71, 0.36);
+}
+
+.interest_profile .saveProfile #arrow3,
+.interest_profile .saveProfile #arrow2,
+.profileDiv .saveProfile #arrow1,
+.profileDiv .saveProfile #arrow4,
+.main-foto .saveProfile #arrow,
+.main-foto .saveProfile #arrow5 {
+    border: none;
+    outline: none;
+}
+
+.interest_profile .saveProfile .fa-arrow-left,
+.main-foto .saveProfile .fa-arrow-left {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+}
+
+
+/* Speciality & Interest */
+
+.interest_profile {
+    display: none;
+    grid-template-areas: "header header" "specialty interest" "specialty interest" "specialty interest" "error error" "profileBtn profileBtn";
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    overflow-y: auto;
+}
+
+.interest_profile h2,
+.main-foto h2 {
+    grid-area: header;
+    width: 100%;
+    height: 35px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    color: #E21047;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.interest_profile h3 {
+    width: 224px;
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #000000;
+}
+
+.interest_profile .output h3 {
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 17px;
+    color: #504E4E;
+    padding: 8px 0 8px;
+    text-align: start;
+}
+
+.interest_profile .output p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #504E4E;
+    max-width: 190px;
+}
+
+.interest_profile .specialize {
+    grid-area: specialty;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.interest_profile .interest {
+    grid-area: interest;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.interest_profile .saveProfile {
+    grid-area: profileBtn;
+}
+
+.interest_profile .speciality-items,
+.interest_profile .interest-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 200px;
+    overflow-y: scroll;
+    margin: 5px 0 20px;
+}
+
+.interest_profile .speciality-items::-webkit-scrollbar,
+.interest_profile .interest-items::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.interest_profile .speciality-items::-webkit-scrollbar:vertical,
+.interest_profile .interest-items::-webkit-scrollbar:vertical {
+    width: 6px;
+}
+
+.interest_profile .speciality-items::-webkit-scrollbar:horizontal,
+.interest_profile .interest-items::-webkit-scrollbar:horizontal {
+    height: 100px;
+}
+
+.interest_profile .speciality-items::-webkit-scrollbar-thumb,
+.interest_profile .interest-items::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(112, 110, 110, 0.28);
+    height: 100px;
+}
+
+.interest_profile .speciality-item {
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.interest_profile input.chk-btn {
+    display: none;
+}
+
+.interest_profile input.chk-btn+label {
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 13px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: center;
+    color: #000000;
+    padding: 4px 7px;
+}
+
+.interest_profile input.chk-btn+label:active,
+.interest_profile input.chk-btn:checked+label {
+    border: 1px solid #E21047;
+    background: #FFFFFF;
+    color: #E21047;
+}
+
+.interest_profile textarea {
+    outline: none;
+    margin-top: 10px;
+    resize: none;
+    width: 190px;
+    height: 35px;
+    padding-right: 10px;
+}
+
+.interest_profile textarea::placeholder {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.44);
+    padding: 6px 15px;
+}
+
+
+/* Photo */
+
+.main-foto {
+    display: none;
+    grid-template-areas: "header " "photo" "photo" "profileBtn ";
+    width: 85%;
+    height: 85%;
+    margin: auto;
+}
+
+.main-foto .saveProfile {
+    grid-area: profileBtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.main-foto .profile-foto-wrapper {
+    grid-area: photo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-foto .profile-foto-wrapper h3 {
+    height: 39px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+    color: #000000;
+}
+
+.main-foto .profile-foto-wrapper a {
+    box-sizing: border-box;
+    color: #ffffff;
+    background: #E21047;
+    border-radius: 3px;
+    margin-top: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding: 4px 6px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.main-foto {
+    color: #E21047;
+}
+
+.main-foto .profile-foto {
+    width: 179px;
+    height: 266px;
+    background: #C4C4C4;
+    background-image: url('../assets/face_icon_attach_foto.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 0;
+}
+
+.main-foto .profile-foto>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* Letter info */
+
+.letter-info,
+.letter-confirmation {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-info {
+    display: none;
+}
+
+.letter-info h2,
+.letter-confirmation h2 {
+    width: 425px;
+    height: 90px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+.letter-info .fa-envelope-open-text,
+.letter-confirmation .fa-envelope-open-text {
+    width: 120px;
+    height: 120px;
+    color: #E21047;
+}
+
+
+/* Password */
+
+.password {
+    /* display: none; */
+    flex-direction: column;
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.password .password-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.password h2 {
+    width: 257px;
+    height: 35px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    color: #E21047;
+    margin: 30px;
+}
+
+.password .password-wrapper label {
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.password .password-wrapper input {
+    width: 180px;
+    height: 29px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    padding-left: 15px;
+    margin: 15px 20px 15px 0;
+    outline: none;
+}
+
+.password-wrapper input::placeholder {
+    width: 324px;
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: start;
+    color: rgba(73, 72, 72, 0.78);
+}
+
+.password-requirements {
+    display: flex;
+    justify-self: self-start;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.password-requirements2 {
+    visibility: hidden;
+}
+
+.password-requirements p,
+.password-requirements2 p {
+    /* width: 50%; */
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 11px;
+    color: rgba(0, 0, 0, 0.44);
+}
+
+.password-save {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.password-save .save-btn {
+    width: 66px;
+    height: 31px;
+    background: #E21047;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+/* TEll about yoursel */
+
+.addUserInfo {
+    display: none;
+    flex-direction: column;
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.addUserInfo h2 {
+    height: 35px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    color: #E21047;
+    margin: 30px;
+    text-align: center;
+}
+
+.addUserInfo textarea {
+    outline: none;
+    margin-top: 10px;
+    resize: none;
+    width: 250px;
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.userInfo-save {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.userInfo-save .save {
+    width: auto;
+    height: 30px;
+    background: #E21047;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin: 0 20px;
+    outline: none;
+    border: none;
+}
+
+input[type=button] {
+    width: 66px;
+    height: 31px;
+    background: #E21047;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    display: inline-block;
+    font-family: Merriweather Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #E21047;
+    outline: 0;
+}
+
+
+/* Change Your Login Or Password */
+
+#change_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/page_13.jpeg') no-repeat center center/cover;
+    height: 69vh;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+#change_login .change-wrapper,
+#wrong-name .change-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 50%;
+}
+
+#change_login h2 {
+    width: 100%;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 15px;
+}
+
+#change_login .form-content,
+#wrong-name .form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#change_login .form-content input {
+    width: 204px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    margin: 6px;
+    padding: 15px;
+    outline: none;
+}
+
+#change_login .form-content input::placeholder {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.78);
+}
+
+#change_login .btn-change {
+    width: 204px;
+    height: 31px;
+    background: #E21047;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 15px;
+    outline: none;
+}
+
+#change_login .confirmation-info {
+    width: 425px;
+    height: 90px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+/* You have entered wrong name */
+
+#wrong-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/Log_screen_pic_12.png') no-repeat center center/cover;
+    height: 69vh;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+#wrong-name .change-name-container {
+    width: 245px;
+    height: 269px;
+    background: rgba(0, 0, 0, 0.67);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrong-name .change-name-container h3 {
+    width: 80%;
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: #E21047;
+    margin-bottom: 15px;
+}
+
+#wrong-name .change-name-container input {
+    width: 204px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    margin: 5px;
+    padding-left: 15px;
+    outline: none;
+}
+
+#wrong-name .change-name-container input::placeholder {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.78);
+}
+
+#wrong-name .change-name-container input:first-of-type::placeholder {
+    color: #E21047;
+}
+
+#wrong-name .change-name-container .btn-login {
+    width: 114px;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 20px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#wrong-name .change-name-container .forgot-password {
+    width: 324px;
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* Friend Info */
+
+#friend .friend-content {
+    width: 90%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    border-bottom: 2px solid #C4C4C4;
+}
+
+#friend .friend-photo {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#friend .general-photo {
+    width: 179px;
+    height: 266px;
+    mix-blend-mode: normal;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+#friend .friend-general-info {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#friend .friend-general-info h2 {
+    width: 251px;
+    height: 45px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    color: #000000;
+}
+
+#friend .friend-general-info>div {
+    display: flex;
+    align-items: center;
+}
+
+#friend .friend-general-info p {
+    height: 23px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    color: #000000;
+}
+
+#friend .friend-general-info p.addInfo {
+    height: 29px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+#friend .friend-general-info .fa-user-circle,
+#friend .friend-general-info .fa-briefcase,
+#friend .friend-general-info .fa-book-open,
+#friend .friend-general-info .fa-paperclip {
+    font-size: 24px;
+    margin-right: 15px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#friend .friend-general-info .fa-comment,
+#friend .friend-general-info .fa-plus-circle {
+    font-size: 31px;
+    margin-right: 15px;
+    color: #E21047;
+    cursor: pointer;
+}
+
+#friend .friend-general-info>div:last-child {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#friend .friend-general-info .add-cv {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #000000;
+}
+
+#friend .friend-general-info button {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+#friend .friend-general-info a.back-to-profile {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #E21047;
+    cursor: pointer;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+#friend .friend-general-info .add-friend {
+    display: flex;
+}
+
+#friend .friend-general-info .add-friend p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7px;
+    line-height: 9px;
+    text-decoration-line: underline;
+    color: #AAAAAA;
+    cursor: pointer;
+}
+
+#friend .friend-general-info .fa-arrow-left {
+    font-size: 16px;
+    font-weight: 300;
+    color: #E21047;
+    border: none;
+}
+
+
+/* Sponsors */
+
+#sponsors {
+    height: 15vh;
+    background: #000000;
+    width: 100%;
+}
+
+.sponsors-grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 1200px;
+    margin: auto;
+}
+
+#sponsors .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+}
+
+
+/* Footer */
+
+#main-footer {
+    background: #E21047;
+    color: #FFFFFF;
+    height: 7vh;
+    width: 100%;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    height: 100%;
+}
+
+#main-footer p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+#main-footer .social .fa-facebook,
+#main-footer .social .fa-twitter,
+#main-footer .social .fa-youtube,
+#main-footer .social .fa-instagram-square {
+    color: rgba(0, 0, 0, 0.7);
+    margin-right: 0.5rem;
+    height: 25px;
+}
+
+
+/* ***************************** */
+
+.create-account-anchor {
+    display: block;
+    margin-top: 20px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #E21047;
+}
+
+
+/*************** upload user photo *************/
+
+.upload-file-btn input {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.upload-icon {
+    color: #E21047;
+}
+
+#userpic {
+    display: none;
+}
+
+.photo-handler-wrapper {
+    width: 179px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 8px 12px;
+}
+
+.photo-handlers {
+    width: 36px;
+    height: 30px;
+    background: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #E21047;
+    text-decoration: none;
+    padding: 6px;
+    outline: none;
+    border: none;
+}
+
+.photo-handlers :disabled {
+    cursor: not-allowed
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+    <link rel="stylesheet" th:href="@{/css/login.css}" href="../static/css/login.css">
+    <title>Document</title>
+</head>
+
+<body data-title="login">
+
+    <header>
+        <div class="logo">
+            <img id="logo" th:src="@{/images/logo.png}" src="../static/images/logo.png" alt="ifo_commlnalka_logo">
+        </div>
+        <div id="burger_menu_holder">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </header>
+
+    <main>
+
+        <img class="central_image" th:src="@{/images/login_pic_12.png}" src="../static/images/login_pic_12.png">
+
+        <div id="form_wrapper">
+
+            <div id="form_header">Login</div>
+
+            <form id="login_form" th:action="@{/login}" method="post">
+
+                <div class="form_input">
+                    <input type="text" name="username" placeholder="name">
+                    <input type="password" name="password" placeholder="password" />
+                </div>
+                <div class="form_button">
+                    <input type="submit" value="Log in">
+                    <a class="small_anchor" th:href="@{/}" href="./change_login_password.html">Forgot your password?</a>
+                </div>
+
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="sponsors">
+            <img class="sponsor_img" th:src="@{images/sponsor_img/spons_2.png}" src="../static/images/sponsor_img/spons_2.png">
+            <img class="sponsor_img" th:src="@{images/sponsor_img/spons_2.png}" src="../static/images/sponsor_img/spons_2.png">
+            <img class="sponsor_img" th:src="@{images/sponsor_img/spons_2.png}" src="../static/images/sponsor_img/spons_2.png">
+            <img class="sponsor_img" th:src="@{images/sponsor_img/spons_2.png}" src="../static/images/sponsor_img/spons_2.png">
+            <img class="sponsor_img" th:src="@{images/sponsor_img/spons_2.png}" src="../static/images/sponsor_img/spons_2.png">
+        </div>
+        <div class="copyright"></div>
+    </footer>
+
+</body>
+
+</html>

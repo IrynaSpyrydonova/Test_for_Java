@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+    <link rel="stylesheet" th:href="@{/css/profile.css}" href="../static/css/profile.css">
+    <title>IfoCommunalka</title>
+</head>
+
+
+<body data-title="my_profile">
+    <header>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <img th:src="@{assets/logo.png}" src="../static/assets/logo.png" alt="Communalka" class="logo">
+                <div class="login">
+                    <button class="loginpage btn">Login</button>
+                    <button class="menu" id="menu"><i class="fas fa-bars"></i></button>
+                    <div id="dropDownMenu" class="'dropdown-content'">
+                        <ul>
+                            <li><a>About</a></li>
+                            <li><a>Help</a></li>
+                            <li><a>Contacts</a></li>
+                            <li class="main"><a>IFOperator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <div class="profile_holder">
+            <div class="profile_image_holder">
+                <img class="profile_main_img" src="../static/assets/girl.png" alt="">
+                <div class="profile_image_handlers">
+                    <a href="">Attach another photo</a>
+                </div>
+            </div>
+
+            <div class="profile_main_info">
+
+                <h1 th:text=${profile.fullname}/>
+                <h2 th:text="${profile.city}+', '+${profile.country}">Brussels, Belgium</h2>
+                <h2 th:text="${occupations}" />
+                <h2 th:text="${interests}" />
+
+                <form action="">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="profile_working_area">
+            <div class="profile_friends_area">
+                <h2>My friends</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sunt enim soluta accusantium iure quae? Quis odit quod, quos quas inventore ex vero praesentium, nisi, accusantium minima impedit repudiandae id?
+            </div>
+            <div class="profile_communication_area">
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Sponsors -->
+    <div id="sponsors">
+        <div class="sponsors-grid">
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_3.png}" src="../static/assets/spons_3.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_2.png}" src="../static/assets/spons_2.png" alt="">
+            </div>
+            <div class="box">
+                <img th:src="@{assets/spons_1.png}" src="../static/assets/spons_1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-wrapper">
+            <p> &copy; Copyright IfOperator 2020</p>
+            <div class="social">
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" th:src="@{js/init.js}" src="../static/js/init.js"></script>
+</body>
+
+
+</html>
